@@ -4,14 +4,34 @@
 <meta charset="utf-8">
   <title></title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/intro.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+		function initialiser() {
+			var latlng = new google.maps.LatLng(48.440028, 1.482639);
+			//objet contenant des propriétés avec des identificateurs prédéfinis dans Google Maps permettant
+			//de définir des options d'affichage de notre carte
+			var options = {
+				center: latlng,
+				zoom: 19,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			
+			//constructeur de la carte qui prend en paramêtre le conteneur HTML
+			//dans lequel la carte doit s'afficher et les options
+			var carte = new google.maps.Map(document.getElementById("carte"), options);
+
+		}
+	</script>
 </head>
-<body class="container">
+<body class="container" onload="initialiser()">
 	<div id="title" class="row col-lg-12 col-md-12">
 	<!--Titre de la page-->
-
+		ZOOTOPIE : Attrape-moi si tu peux ! 
 	</div>
 	<div class="row col-lg-12 col-md-12">
 	<!--Zone de recherche-->
@@ -21,16 +41,15 @@
 
 
 		</div>
-		<div id="map" class="col-lg-6 col-md-6">
+		<div id="map" class="col-lg-6 col-md-6" >
 		<!--Zone de google map-->
 			<div id="rechercher" class="row col-lg-12 col-md-12">
 			<!--barre de recherche-->
-
+				<input type="text" name="input" value="Rechercher des méchants" onFocus="javascript:this.value=''" style="width:100%">
 
 			</div>
-			<div id="map" class="row col-lg-12 col-md-12">
+			<div id="carte" style="height:500px;" class="row col-lg-12 col-md-12">
 			<!--Google map-->
-
 
 			</div>
 			<div id="meteo" class="row col-lg-12 col-md-12">
@@ -88,6 +107,8 @@
 			</div>
 		</div>
 	</div>
-
+<footer>
+	
+</footer>
 </body>
 </html>
