@@ -1,0 +1,53 @@
+body{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	color:white;
+	font-size: 20px;
+}
+.container-fluid{
+	margin-right:15px;
+	margin-left: 15px;
+	padding: 0px;
+}
+#title{
+	background-color: black;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+#bloc1{
+	padding:20px;
+}
+p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#bloc1 input{
+	margin-bottom: 10px;
+}
+input{
+	color: #333;
+	font-size: 16px;
+}
+#personnage{
+	padding-left: 10%;
+}
+#map{
+	padding-right: 10%;
+}
+#detailPerso1{
+	background-color: #5a6da9;
+	padding: 20px;
+}
+#detailPerso1 input{
+	width : 75%;
+}
+#detailPerso2{
+	background-color: #313b54;
+	padding: 20px;
+}
+#imgRenard{
+	margin-left:-105px;
+	margin-top: -40px;
+}

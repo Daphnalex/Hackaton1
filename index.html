@@ -28,83 +28,96 @@
 		}
 	</script>
 </head>
-<body class="container" onload="initialiser()">
-	<div id="title" class="row col-lg-12 col-md-12">
+<body class="container-fluid" onload="initialiser()">
+	<div id="title" class="row-fluid col-lg-12 col-md-12">
 	<!--Titre de la page-->
 		ZOOTOPIE : Attrape-moi si tu peux ! 
 	</div>
-	<div class="row col-lg-12 col-md-12">
+	<div id="bloc1" class="row-fluid col-lg-12 col-md-12">
 	<!--Zone de recherche-->
 		<div id="personnage" class="col-lg-6 col-md-6">
 		<!--Personnage bulle-->
-
+			<img src="img/lapin.png">
 
 
 		</div>
 		<div id="map" class="col-lg-6 col-md-6" >
 		<!--Zone de google map-->
-			<div id="rechercher" class="row col-lg-12 col-md-12">
+			<div id="rechercher" class="row-fluid col-lg-12 col-md-12">
 			<!--barre de recherche-->
-				<input type="text" name="input" value="Rechercher des méchants" onFocus="javascript:this.value=''" style="width:100%">
+				<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px">
+				<input type="text" name="input" value="Rechercher des méchants" onFocus="javascript:this.value=''" style="width:90%">
 
 			</div>
-			<div id="carte" style="height:500px;" class="row col-lg-12 col-md-12">
+			<div id="carte" style="height:500px;" class="row-fluid col-lg-12 col-md-12">
 			<!--Google map-->
 
 			</div>
-			<div id="meteo" class="row col-lg-12 col-md-12">
+			<div id="meteo" class="row-fluid col-lg-12 col-md-12">
 			<!--Météo de la ville pointée-->
 
 
 			</div>
 		</div>
 	</div>
-	<div id="detailPerso1" class="row col-lg-12 col-md-12">
+	<div id="detailPerso1" class="row-fluid col-lg-12 col-md-12">
 	<!--Bloc lapine-->
-		<div class="col-lg-4 col-md-4">
-			<img src="">
+		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+			<img src="img/lapin2.png">
 		</div>
 		<div class="col-lg-8 col-md-8">
-			<div class="row col-lg-12 col-md-12">
+			<div class="row-fluid col-lg-12 col-md-12">
 				<!--localisation-->
-
+				<p>Je suis à <span id="villePerso1">l'hôtel de Police</span> à Chartres</p>
 
 			</div>
-			<div class="row col-lg-12 col-md-12">
+			<div class="row-fluid col-lg-12 col-md-12">
 				<!--Me rendre à-->
-
+				<p>Me rendre à :
+					<input type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:60%">
+					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px">
+				</p> 
 
 			</div>
-			<div class="row col-lg-12 col-md-12">
+			<div class="row-fluid col-lg-12 col-md-12">
 				<!--Attraper-->
-
-
+				<p>Attraper :
+					<input type="text" name="input" value="Saisir le méchant" onFocus="javascript:this.value=''" style="width:60%">
+					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px;">
+				</p>
 
 			</div>
 		</div>
 	</div>
-	<div id="detailPerso2" class="row col-lg-12 col-md-12">
+	<div id="detailPerso2" class="row-fluid col-lg-12 col-md-12">
 	<!--Bloc renard-->
-		<div class="col-lg-4 col-md-4">
-			<img src="">
+		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1">
+	
 		</div>
-		<div class="col-lg-8 col-md-8">
-			<div class="row col-lg-12 col-md-12">
+		<div class="col-lg-6 col-md-6">
+			<div id="localisation" class="row-fluid col-lg-12 col-md-12">
 				<!--localisation-->
-
+				<p>Je suis à <span id="villePerso2">l'hôtel de police</span> à Chartres</p>
 
 			</div>
-			<div class="row col-lg-12 col-md-12">
+			<div class="row-fluid col-lg-12 col-md-12">
 				<!--Me rendre à-->
-
+				<p>Me rendre à :
+					<input type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:75%">
+					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px">
+				</p> 
 
 			</div>
-			<div class="row col-lg-12 col-md-12">
+			<div class="row-fluid col-lg-9 col-md-9">
 				<!--Attraper-->
-
-
-				
+				<p>Attraper :
+					<input type="text" name="input" value="Saisir le méchant" onFocus="javascript:this.value=''" style="width:75%">
+					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px;">
+				</p>
 			</div>
+		</div>
+		<div id="imgRenard" class="col-lg-3 col-md-3">
+			<img src="img/renard.png">
 		</div>
 	</div>
 <footer>
