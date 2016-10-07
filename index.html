@@ -20,15 +20,14 @@
 				zoom: 19,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
-			
-			//constructeur de la carte qui prend en paramêtre le conteneur HTML
-			//dans lequel la carte doit s'afficher et les options
-			var carte = new google.maps.Map(document.getElementById("carte"), options);
+		};
+		
 
-		}
 	</script>
 </head>
 <body class="container-fluid" onload="initialiser()">
+<input id="lat" type="hidden" value=""/>
+<input id="lng" type="hidden" value=""/>
 	<div id="title" class="row-fluid col-lg-12 col-md-12">
 	<!--Titre de la page-->
 		ZOOTOPIE : Attrape-moi si tu peux ! 
@@ -37,7 +36,7 @@
 	<!--Zone de recherche-->
 		<div id="personnage" class="col-lg-6 col-md-6">
 		<!--Personnage bulle-->
-			<img src="img/lapin.png">
+			<img src="img/lapinBulle.png">
 
 
 		</div>
@@ -52,6 +51,13 @@
 			<div id="carte" style="height:500px;" class="row-fluid col-lg-12 col-md-12">
 			<!--Google map-->
 
+			</div>
+			<div id="message" class="row-fluid col-lg-12 col-md-12">
+			<!--Message résultat carte-->
+
+			</div>
+			<div><p style="color:black">Météo du jour :
+				<img id="icon" style="width:15%"></p>
 			</div>
 			<div id="meteo" class="row-fluid col-lg-12 col-md-12">
 			<!--Météo de la ville pointée-->
@@ -74,7 +80,7 @@
 			<div class="row-fluid col-lg-12 col-md-12">
 				<!--Me rendre à-->
 				<p>Me rendre à :
-					<input type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:60%">
+					<input class="address" type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:60%">
 					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px">
 				</p> 
 
@@ -100,15 +106,15 @@
 				<p>Je suis à <span id="villePerso2">l'hôtel de police</span> à Chartres</p>
 
 			</div>
-			<div class="row-fluid col-lg-12 col-md-12">
+			<div id="newLocalisationP2" class="row-fluid col-lg-12 col-md-12">
 				<!--Me rendre à-->
 				<p>Me rendre à :
-					<input type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:75%">
+					<input class="address" type="text" name="input" value="Saisir le lieu" onFocus="javascript:this.value=''" style="width:75%">
 					<img src="https://pixabay.com/static/uploads/photo/2013/10/01/16/55/magnifying-glass-189254_960_720.png" style="height:26px">
 				</p> 
 
 			</div>
-			<div class="row-fluid col-lg-9 col-md-9">
+			<div id="attraperPerso1" class="row-fluid col-lg-9 col-md-9">
 				<!--Attraper-->
 				<p>Attraper :
 					<input type="text" name="input" value="Saisir le méchant" onFocus="javascript:this.value=''" style="width:75%">
@@ -121,7 +127,7 @@
 		</div>
 	</div>
 <footer>
-	
+	<script type="text/javascript" src="appli.js"></script>
 </footer>
 </body>
 </html>

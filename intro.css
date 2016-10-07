@@ -1,0 +1,32 @@
+@chartset "UTF-8";
+
+
+body{
+
+	background-image:url(http://backgrounds4k.net/wp-content/uploads/2016/04/Zootopia-uhd-wallpaper.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
+
+#video {
+
+
+	position: absolute;
+	left: 15%;
+	top: 50%;
+
+}
+
+button {
+
+	position: absolute;
+	left:20%;
+	top:80%;
+	border-radius:12px 0 12px 0;
+	background: #1F98D4;
+	border:none;
+	color:white;
+	font:bold 12px Verdana;
+	padding:6px 10px 10px 6px;
+}
